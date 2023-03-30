@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: lightblue;
+}
+.container{
+    width: 450px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5) ;
+}
+.form header{
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+.form form{
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+.form form .error-txt{
+    display: none;
+    color: rgb(238, 75, 75);
+    background: rgb(233, 178, 178);
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 0;
+    margin-bottom: 14px;
+    border: 1px solid rgb(221, 166, 166);
+}
+.form form .name-details{
+    display: flex;
+}
+form .name-details .field:first-child{
+    margin-right: 10px;
+}
+form .name-details .field:last-child {
+    margin-left: 10px;
+}
+.form form .field{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.form form .field i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    color: rgb(177, 175, 175);
+    cursor: pointer;
+}
+.form form .field i.active::before{
+    content: "\f070";
+    color: #333;
+}
+.form form .field input{
+    outline: none;
+}
+.form form .input input{
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    padding: 0 10px;
+}
+.form form .btn input{
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    background: rgb(81, 71, 223);
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid rgb(81, 71, 223);
+}
+.form .link{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.form .link a{
+    color: grey;
+}
+.form .link a:hover{
+    text-decoration: underline;
+}
+.users{
+    padding: 10px 20px;
+}
+.users header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+}
+.container img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+:is(.users, .users-list) .content{
+    display: flex;
+    align-items: center;
+}
+.users header .content img{
+    height: 50px;
+    width: 50px;
+    margin-right: 8px;
+}
+:is(.users, .users-list) .details span{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+.users header .logout{
+    background:rgb(81, 71, 223);
+    color: white;
+    padding: 9px 15px;
+    font-size: 16px;
+    border-radius: 7px;
+}
+.users .search{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.users .search .text{
+    font-size: 17px;
+    margin-left: 10px;
+}
+.users .search input{
+    position: absolute;
+    width: calc(100% - 47px);
+    border: 1px solid lightgray;
+    height: 40px;
+    border-radius: 7px 0 0 7px;
+    font-size: 17px;
+    padding: 0 13px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.users .search button{
+    width: 47px;
+    height: 40px;
+    border-radius: 0 7px 7px 0;
+    outline: none;
+    font-size: 17px;
+    color: rgb(81, 71, 223);
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.users .search button.active{
+    background: rgb(81, 71, 223);
+    color: white;
+}
+.users .search button.active i::before{
+    content: "\f00d";
+}
+.users-list{
+    max-height: 350px;
+    overflow-y: scroll;
+}
+:is(.users-list,.chat-box)::-webkit-scrollbar{
+    width: 0px;
+}
+.users-list a{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 7px;
+}
+.users-list a .content .details p{
+    color: rgb(148, 147, 147);
+}
+.users-list a .status-dot{
+    transform: translateY(35%);
+    font-size: 10px;
+    color: rgb(40, 139, 40);
+}
+.users-list a .status-dot.offline{
+    color:rgb(165, 164, 164) ;
+}
+.users-list .details{
+    color: black;
+}
+.users-list a .content .details{
+    margin-left: 8px;
+}
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding:15px 20px;
+}
+.chat-area header .back-icon{
+    font-size: 17px;
+    color: black;
+}
+.chat-area header img{
+    height: 45px;
+    width: 45px;
+    margin-right: 8px;
+    margin-left: 10px;
+}
+.chat-area header span{
+    font-size: 18px;
+    font-weight: 700;
+}
+.chat-box{
+    background: rgb(241, 241, 241);
+    max-height: 450px;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%), inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+.chat-box .outgoing{
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.chat-box .chat p{
+    padding: 8px 4px;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+.outgoing .details{
+    margin-left: auto;
+    max-width: 55%;
+}
+.chat-box .outgoing .details p{
+    color: white;
+    background:rgb(81, 71, 223) ;
+    border-radius: 12px 12px 0 12px;
+}
+.chat-box .incoming{
+    display: flex;
+    align-items: flex-end;
+}
+.incoming .details{
+    margin-right: auto;
+    max-width: 55%;
+}
+.chat-box .incoming img{
+    height: 35px;
+    width: 35px;
+}
+.chat-box .incoming .details{
+    background: white;
+    color: rgb(87, 85, 85);
+    margin-left: 6px;
+    margin-top: 12px;
+    border-radius: 12px 12px 12px 0;
+}
+.chat-area .typing-area{
+    padding: 15px 15px;
+    display: flex;
+}
+.typing-area input{
+    width: 85%;
+    height: 45px;
+    outline: none;
+    font-size: 17px;
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid lightgray;
+}
+.typing-area button{
+    width: 10%;
+    height: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background:rgb(81, 71, 223) ;
+    color: white;
+    font-size: 19px;
+    border-radius: 0 5px 5px 0;
+}
