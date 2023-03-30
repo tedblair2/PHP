@@ -1,0 +1,17 @@
+.brand{
+    background: rgb(189, 144, 151) !important;
+}
+.brand-text{
+    color: rgb(189, 144, 151) !important;
+}
+form{
+    padding: 20px;
+    max-width: 460px;
+    margin: 20px auto;
+}
+form input{
+    margin-top: 5px;
+}
+form label{
+    margin-top: 10px;
+}
